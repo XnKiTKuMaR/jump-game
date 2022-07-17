@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="manifest.webmanifest" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="JumpJump" />
+    <meta name="apple-mobile-web-app-title" content="JumpJump" />
+    <meta name="msapplication-starturl" content="index.html" />
+    <title>Jump Game</title>
+    <script src="//cdn.jsdelivr.net/npm/phaser@3.54.0/dist/phaser.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+    <script src="game.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+
+
+    <style type="text/css">
+        td a,
+        td a:hover,
+        td a:visited,
+        td a:active {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        li {
+            margin-bottom: 20px;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Calibri";
+            background-color: rgb(183 231 250);
+
+
+        }
+
+        td {
+            font-size: xx-large;
+            font-weight: 800;
+            text-shadow: 2px 2px #333;
+            color: #fff;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            -o-user-select: none;
+        }
+
+        @font-face {
+            font-family: font1;
+            src: url('assets/PressStart2P-Regular.ttf');
+            font-weight: 200;
+            font-weight: normal;
+            box-shadow: 2px 2px;
+        }
+
+        ul {
+            padding: 0px !important;
+        }
+
+        li {
+            font-family: font1;
+            line-height: 1.5em;
+            color: #333
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="phaser-example" style="overflow: hidden; width: 100%;height:1px">
+
+    </div>
+
+
+
+    <div style="position: absolute;width:calc(width-800px)/2;height:100%;z-index:100;top:0px">
+        <table style="height:100%">
+            <tbody>
+                <tr>
+                    <td style="height:33%" id="tdrefresh" onclick="window.location.reload(false);">↻</td>
+                </tr>
+                <tr>
+                    <td id="tdup1">↑</td>
+                </tr>
+                <tr>
+                    <td id="tdleft">←</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+    <div id="info" class="modal" style="font-size:0.5em;color:rgb(183 231 250)">
+        <ul>
+            <li>Use arrow keys on your keyboard(PC) or the onscreen keys to play the game. Press the <span
+                    style="font-size: large;">↻</span> button to restart
+                the game! </li>
+            <li>Find the full source code <a href="https://github.com/XNKITKUMAR/Jump-Game"> here !</a>
+            </li>
+            <li>This game uses images, sprites and sounds from <a href="https://xnkit.github.io/k/">ᴀɴᴋɪᴛ 🇮🇳</a> released under
+            </li>
+
+        </ul>
+    </div>
+    <div style="position: absolute;right:0px;width:calc(width-800px)/2;height:100%;z-index:110;top:0px;">
+        <table style="height:100%">
+            <tbody>
+                <tr>
+                    <td style="height:33%" id="tdabout"> <a href="#info" rel="modal:open">?</a> </td>
+                </tr>
+                <tr>
+                    <td id="tdup">↑</td>
+                </tr>
+                <tr>
+                    <td id="tdright">→</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div style="font-family: font1;height:0px">&nbsp;</div>
+
+</body>
+
+</html>
